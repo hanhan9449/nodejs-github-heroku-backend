@@ -1,0 +1,8 @@
+{
+  "name": "nodejs-github-heroku-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hanhan9449/nodejs-github-heroku-backend.git",
+  "author": "hanhan9449 <haannn@qq.com>",
+  "license": "MIT"
+}
