@@ -1,9 +1,13 @@
+const path = require('path')
 const express = require('express')
 const PORT = process.env.PORT || 5000
-const http = require('http')
+const app = express()
 
-const server = http.createServer((req, res)=> {
-	res.writeHead(200, { "Content-Type": "application/json"})
-	res.end(JSON.stringify({test: "okay"}))
+
+app.use(express.static(path.join(__dirname, 'public')))
+app.get('/', (req, res)=> {
+    res.send('Hello express')
 })
-server.listen(PORT)
+app.listen(PORT, ()=> {
+    console.log(`start on ${PORT}`)
+})
